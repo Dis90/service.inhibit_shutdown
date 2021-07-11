@@ -73,7 +73,7 @@ addon = xbmcaddon.Addon()
 monitor = MyMonitor()
 load_settings()
 
-while not xbmc.abortRequested:
+while not monitor.abortRequested():
     if check_services():
         xbmc.executebuiltin('InhibitIdleShutdown(true)')
     else:
